@@ -4,7 +4,7 @@
 
 This template is made to speed up the process of setting up Tailwind CSS and Flowbite in a Blazor WebAssembly project so that you can begin developing
 your Blazor apps much more quickly while having all the redundant setup work being taken care of.
-The default non-empty Blazor templates come equipped with Bootstrap. However, this template replaces Bootstrap with Tailwind CSS, and in addition to that, it instals Flowbite, which is an open-source, free to use UI components library built on top of Tailwind CSS, the library has a plethora of well-designed, mobile-responive and fully interactive components that you can use to build your applications.
+The default non-empty Blazor templates come equipped with Bootstrap. However, this template replaces Bootstrap with Tailwind CSS, and in addition to that, it installs Flowbite, which is an open-source, free to use UI components library built on top of Tailwind CSS, the library has a plethora of well-designed, mobile-responsive and fully interactive components that you can use to build your applications.
 
 <img width="1680" alt="Screenshot 2024-01-23 at 8 00 34 PM" src="https://github.com/rasheed-k-mozaffar/FlowbiteBlazorWasmStarter/assets/109946031/8b36ab67-ef16-458b-93ee-82f9ddfd3737">
 
