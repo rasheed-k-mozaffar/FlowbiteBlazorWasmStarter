@@ -3,9 +3,9 @@
 
 <PageTitle>Weather</PageTitle>
 
-<h1>Weather</h1>
+<h1 class="text-4xl font-bold">Weather</h1>
 
-<p>This component demonstrates fetching data from the server.</p>
+<p class="text-xl">This component demonstrates fetching data from the server.</p>
 
 @if (forecasts == null)
 {
@@ -13,27 +13,46 @@
 }
 else
 {
-    <table class="table">
-        <thead>
+    <div class="relative overflow-x-auto mt-5">
+    <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+        <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
             <tr>
-                <th>Date</th>
-                <th>Temp. (C)</th>
-                <th>Temp. (F)</th>
-                <th>Summary</th>
+                <th scope="col" class="px-6 py-3">
+                    Date
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Temp. (C)
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Temp. (F)
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Summary
+                </th>
             </tr>
         </thead>
         <tbody>
             @foreach (var forecast in forecasts)
-            {
-                <tr>
-                    <td>@forecast.Date.ToShortDateString()</td>
-                    <td>@forecast.TemperatureC</td>
-                    <td>@forecast.TemperatureF</td>
-                    <td>@forecast.Summary</td>
-                </tr>
-            }
-        </tbody>
-    </table>
+                {
+                    <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                            @forecast.Date.ToShortDateString()
+                        </th>
+                        <td class="px-6 py-4">
+                            @forecast.TemperatureC
+
+                        </td>
+                        <td class="px-6 py-4">
+                            @forecast.TemperatureF
+                        </td>
+                        <td class="px-6 py-4">
+                            @forecast.Summary
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
 }
 
 @code {

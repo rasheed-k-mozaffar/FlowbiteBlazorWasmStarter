@@ -1,0 +1,25 @@
+﻿@inherits LayoutComponentBase
+@inject IJSRuntime Js
+
+<div>
+    <div>
+        <SideBar />
+    </div>
+
+    <main class="p-4 sm:ml-64">
+        <article class="p-4 mt-14">
+            @Body
+        </article>
+    </main>
+</div>
+
+
+@code {
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            await Js.InvokeVoidAsync("window.initializeFlowbite");
+        }
+    }
+}
