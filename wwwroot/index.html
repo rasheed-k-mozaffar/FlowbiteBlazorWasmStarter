@@ -7,6 +7,8 @@
     <title>FlowbiteBlazorWasmStarter</title>
     <base href="/" />
     <link rel="stylesheet" href="css/app.css" />
+    <link rel="stylesheet" href="css/app.min.css">
+    
     <link rel="icon" type="image/png" href="favicon.png" />
     <link href="FlowbiteBlazorWasmStarter.styles.css" rel="stylesheet" />
 </head>
@@ -16,11 +18,18 @@
 
     </div>
 
-    <div id="blazor-error-ui">
+    <!-- <div id="blazor-error-ui">
         An unhandled error has occurred.
         <a href="" class="reload">Reload</a>
         <a class="dismiss">🗙</a>
-    </div>
+    </div> -->
+
+    <script>
+        window.initializeFlowbite = () => {
+            initFlowbite();
+        }
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
     <script src="_framework/blazor.webassembly.js"></script>
 </body>
 
