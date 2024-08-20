@@ -1,8 +1,10 @@
 /** @type {import('tailwindcss').Config} */
+
 module.exports = {
   content: [
-    "./**/*.{razor,html,cshtml}",
-    "./node_modules/flowbite/**/*.js"
+    "./Layout/**/*.{razor,html,cshtml,css}",
+    "./Pages/**/*.{razor,html,cshtml,css}",
+    "./node_modules/flowbite/dist/flowbite.min.{js,css}"
   ],
   theme: {
     extend: {},
@@ -11,4 +13,3 @@ module.exports = {
     require('flowbite/plugin')
   ],
 }
-
